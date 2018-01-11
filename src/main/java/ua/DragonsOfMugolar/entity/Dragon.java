@@ -1,4 +1,4 @@
-package ua.DragonsOFMugolar.entity;
+package ua.DragonsOfMugolar.entity;
 
 public class Dragon {
     private int scaleThickness;

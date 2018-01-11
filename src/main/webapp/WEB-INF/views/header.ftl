@@ -11,8 +11,8 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <ul class="nav navbar-nav navbar-left">
-            <li class=""><a href="">HOME</a></li>
-            <li class=""><a href="">GAME</a></li>
+            <li class=""><a href="/">HOME</a></li>
+            <li class=""><a href="/game">GAME</a></li>
         </ul>
     </div>
 

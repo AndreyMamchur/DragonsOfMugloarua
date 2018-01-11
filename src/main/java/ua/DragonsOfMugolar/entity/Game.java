@@ -1,10 +1,14 @@
 package ua.DragonsOfMugolar.entity;
 
+import java.util.List;
+
 public class Game {
-    private long idGame;
+    private long gameId;
     private int allBattle;
     private int victoryBattle;
     private int defeatBattle;
+    private Knight knight;
+    private Dragon dragon;
 
     public Game() {
     }
@@ -15,19 +19,28 @@ public class Game {
         this.defeatBattle = defeatBattle;
     }
 
-    public Game(long idGame, int allBattle, int victoryBattle, int defeatBattle) {
-        this.idGame = idGame;
+    public Game(long gameId, int allBattle, int victoryBattle, int defeatBattle) {
+        this.gameId = gameId;
         this.allBattle = allBattle;
         this.victoryBattle = victoryBattle;
         this.defeatBattle = defeatBattle;
     }
 
-    public long getIdGame() {
-        return idGame;
+    public Game(long gameId, int allBattle, int victoryBattle, int defeatBattle, Knight knight, Dragon dragon) {
+        this.gameId = gameId;
+        this.allBattle = allBattle;
+        this.victoryBattle = victoryBattle;
+        this.defeatBattle = defeatBattle;
+        this.knight = knight;
+        this.dragon = dragon;
     }
 
-    public void setIdGame(long idGame) {
-        this.idGame = idGame;
+    public long getGameId() {
+        return gameId;
+    }
+
+    public void setGameId(long gameId) {
+        this.gameId = gameId;
     }
 
     public int getAllBattle() {
@@ -52,5 +65,21 @@ public class Game {
 
     public void setDefeatBattle(int defeatBattle) {
         this.defeatBattle = defeatBattle;
+    }
+
+    public Knight getKnight() {
+        return knight;
+    }
+
+    public void setKnight(Knight knight) {
+        this.knight = knight;
+    }
+
+    public Dragon getDragon() {
+        return dragon;
+    }
+
+    public void setDragon(Dragon dragon) {
+        this.dragon = dragon;
     }
 }

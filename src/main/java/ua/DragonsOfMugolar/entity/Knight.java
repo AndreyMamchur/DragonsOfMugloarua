@@ -1,4 +1,4 @@
-package ua.DragonsOFMugolar.entity;
+package ua.DragonsOfMugolar.entity;
 
 public class Knight {
     private String name;
