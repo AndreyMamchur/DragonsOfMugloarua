@@ -27,4 +27,6 @@ public class GameController {
         model.addAttribute("knight", gameService.startGame().getKnight());
         return "game";
     }
+
+
 }
