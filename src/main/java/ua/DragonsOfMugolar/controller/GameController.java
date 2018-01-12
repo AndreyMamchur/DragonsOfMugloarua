@@ -5,7 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import ua.DragonsOfMugolar.entity.Dragon;
 import ua.DragonsOfMugolar.service.GameService;
 
 @Controller
@@ -22,9 +25,20 @@ public class GameController {
         return "index";
     }
 
-    @GetMapping("/game")
+    @GetMapping("/startGame")
     public String startGame(Model model){
-        model.addAttribute("knight", gameService.startGame().getKnight());
+            model.addAttribute("knight", gameService.startGame().getKnight());
+            model.addAttribute("dragon", GameService.game.getDragon());
+            return "game";
+    }
+
+
+
+    @PostMapping("/createDragon")
+    public String createDragon(@ModelAttribute Dragon dragon, Model model){
+        gameService.createDragon(dragon);
+        model.addAttribute("knight", GameService.game.getKnight());
+        model.addAttribute("dragon", GameService.game.getDragon());
         return "game";
     }
 

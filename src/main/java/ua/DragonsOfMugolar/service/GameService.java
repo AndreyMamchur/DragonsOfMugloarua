@@ -2,6 +2,7 @@ package ua.DragonsOfMugolar.service;
 
 import com.google.gson.Gson;
 import org.springframework.stereotype.Service;
+import ua.DragonsOfMugolar.entity.Dragon;
 import ua.DragonsOfMugolar.entity.Game;
 import ua.DragonsOfMugolar.utils.GameUtils;
 
@@ -13,7 +14,6 @@ public class GameService {
     private String battleUrl = "http://www.dragonsofmugloar.com/api/game/{gameid}/solution";
 
     public Game startGame() {
-
         getGame();
         return game;
     }
@@ -23,5 +23,9 @@ public class GameService {
         Gson gson = new Gson();
         game = gson.fromJson(gameJson, Game.class);
         return game;
+    }
+
+    public void createDragon(Dragon dragon) {
+        game.setDragon(dragon);
     }
 }
