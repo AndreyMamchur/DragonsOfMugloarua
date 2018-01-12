@@ -25,7 +25,7 @@
 
     Our financial advisor Travis will be keeping a close eye on you. We have pretty solid proof that Travis was the one responsible for the Great Paprika Mayonnaise Incident of 2014, so we would take him seriously if we were you, that was some pretty nasty stuff.<br>
 
-    <div align="center"> <a href="/game">START GAME</a> </div>
+    <div align="center"> <a href="/startGame">START GAME</a> </div>
 </div>
 
 </body>

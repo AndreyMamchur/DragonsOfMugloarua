@@ -39,8 +39,31 @@
         </tr>
     </table>
     <br>
+<#if dragon??>
+    Your dragon!!!
+    <table>
+        <tr>
+            <td>Scale Thickness</td>
+            <td id="valueKnight" width="15%">${dragon.scaleThickness}</td>
+        </tr>
+        <tr>
+            <td>Claw Sharpness</td>
+            <td id="valueKnight">${dragon.clawSharpness}</td>
+        </tr>
+        <tr>
+            <td>Wing Strength</td>
+            <td id="valueKnight">${dragon.wingStrength}</td>
+        </tr>
+        <tr>
+            <td>Fire Breath</td>
+            <td id="valueKnight">${dragon.fireBreath}</td>
+        </tr>
+    </table>
+    <br>
+<#else>
     Prepare a dragon for this battle!<br>
-<#include "createDragonForm.ftl">
+    <#include "createDragonForm.ftl">
+</#if>
 </div>
 
 </body>
