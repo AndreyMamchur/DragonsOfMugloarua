@@ -12,7 +12,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body class="container">
-
+<#if response??>
+    ${response}
+<#else>
 <div id="info">
     Hello my dear, Head of Dragon Resources Management!<br>
     New knigt come in our kingdom. <br> <br>
@@ -58,6 +60,13 @@
             <td>Fire Breath</td>
             <td id="valueKnight">${dragon.fireBreath}</td>
         </tr>
+        <tr>
+            <td>
+                <form action="startBattle" method="post" class="form-group">
+                        <input type="submit" value="Start Battle"/>
+                </form>
+            </td>
+        </tr>
     </table>
     <br>
 <#else>
@@ -65,6 +74,6 @@
     <#include "createDragonForm.ftl">
 </#if>
 </div>
-
+</#if>
 </body>
 </html>

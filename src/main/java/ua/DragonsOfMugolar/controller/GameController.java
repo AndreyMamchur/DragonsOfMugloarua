@@ -28,11 +28,8 @@ public class GameController {
     @GetMapping("/startGame")
     public String startGame(Model model){
             model.addAttribute("knight", gameService.startGame().getKnight());
-            model.addAttribute("dragon", GameService.game.getDragon());
             return "game";
     }
-
-
 
     @PostMapping("/createDragon")
     public String createDragon(@ModelAttribute Dragon dragon, Model model){
@@ -42,5 +39,9 @@ public class GameController {
         return "game";
     }
 
-
+    @PostMapping("/startBattle")
+    public String startBatttle(Model model){
+        model.addAttribute("response", gameService.startBattle());
+        return "game";
+    }
 }

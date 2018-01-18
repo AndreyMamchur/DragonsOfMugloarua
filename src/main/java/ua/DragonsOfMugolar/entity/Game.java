@@ -1,8 +1,14 @@
 package ua.DragonsOfMugolar.entity;
 
+import com.google.gson.annotations.Expose;
+
 public class Game {
+
     private long gameId;
+
     private Knight knight;
+
+    @Expose
     private Dragon dragon;
 
     public Game() {
@@ -31,4 +37,5 @@ public class Game {
     public void setDragon(Dragon dragon) {
         this.dragon = dragon;
     }
+
 }

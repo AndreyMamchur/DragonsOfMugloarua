@@ -1,9 +1,15 @@
 package ua.DragonsOfMugolar.entity;
 
+import com.google.gson.annotations.Expose;
+
 public class Dragon {
+    @Expose
     private int scaleThickness;
+    @Expose
     private int clawSharpness;
+    @Expose
     private int wingStrength;
+    @Expose
     private int fireBreath;
 
     public Dragon() {
@@ -47,4 +53,5 @@ public class Dragon {
     public void setFireBreath(int fireBreath) {
         this.fireBreath = fireBreath;
     }
+
 }
